@@ -5,10 +5,10 @@ import MovieList from "./pages/MovieList";
 
 function App() {
   return (
-    <div className="App dark:bg-slate-800">
+    <>
       <MovieList apiPath="movie/now_playing" title="Home" />
       <Footer />
-    </div>
+    </>
   );
 }
 
