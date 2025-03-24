@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router";
 
 function AllRoutes() {
   return (
-    <div className="dark:bg-darkbg">
+    <div className="App dark:bg-slate-800">
       <Routes>
         {/* <Route path="/" element={<App />} /> */}
         {/* <Route
