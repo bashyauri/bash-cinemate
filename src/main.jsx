@@ -32,7 +32,7 @@ createRoot(document.getElementById("root")).render(
           element={<MovieList apiPath="movie/upcoming" title="Upcoming" />}
         />
         <Route path="search" element={<Search apiPath="search/movie" />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound title="Page Not Found" />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

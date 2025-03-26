@@ -2,11 +2,14 @@ import React from "react";
 import { useSearchParams } from "react-router";
 import useFetch from "../hooks/useFetch";
 import Card from "../components/Card";
+import useTitle from "../hooks/useTitle";
 
 function Search({ apiPath = "" }) {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get("q");
   const { data: movies } = useFetch(apiPath, searchQuery);
+  useTitle(`Search ${searchQuery}`);
+
   return (
     <div className="App dark:bg-slate-800">
       <main>

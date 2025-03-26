@@ -2,8 +2,10 @@ import React from "react";
 import PageNotFoundImage from "../assets/images/pagenotfound.png";
 import { Link } from "react-router";
 import Button from "../components/Button";
+import useTitle from "../hooks/useTitle";
 
-function PageNotFound() {
+function PageNotFound({ title = "" }) {
+  useTitle(title);
   return (
     <div className="App dark:bg-slate-800">
       <main>

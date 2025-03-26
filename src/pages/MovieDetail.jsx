@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Backup from "../assets/images/backup.png";
 import { useParams } from "react-router";
+import useTitle from "../hooks/useTitle";
 
 function MovieDetail() {
   const params = useParams();
@@ -21,6 +22,7 @@ function MovieDetail() {
     };
     fetchMovie();
   }, []);
+  useTitle(movie.title);
   return (
     <div className="App dark:bg-slate-800">
       <main>
