@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes, ScrollRestoration } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
 import MovieDetail from "./pages/MovieDetail.jsx";
@@ -8,11 +8,14 @@ import MovieList from "./pages/MovieList.jsx";
 import Search from "./pages/Search.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
 import Header from "./components/Header.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
+
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="movie/:id" element={<MovieDetail />} />
